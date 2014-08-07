@@ -13,7 +13,9 @@ class NonDuplicatedValues
 		print "#{@arr}"+"\n"
 	end
 end
-
+if ARGV.length == 0
+	abort("Arguements missing. Usage: ./nonDuplicatedValues.rb value1 value2 .. valueN")
+end
 non_duplicate = NonDuplicatedValues.new
 arr = []
 for element in ARGV
