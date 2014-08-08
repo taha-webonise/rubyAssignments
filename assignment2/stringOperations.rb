@@ -11,10 +11,10 @@ class String
 		splitted = string1.split(".")
 		for sentences in splitted
 			sentence = sentences.split(" ")
-			print "#{sentence.reverse}"
+			print "#{sentence.reverse}\n\n"
 		end
 	end
-	def length(string1, string2)
+	def find_length(string1, string2)
 		print "Length of string1 is: #{string1.length}\n"
 		print "Length of string2 is: #{string2.length}\n"
 	end
@@ -23,7 +23,7 @@ class String
 		string1.delete!(">")
 		string1.delete!("br")
 		string1.delete!("/")
-		print "After deleting html tags:\t#{string1}"
+		print "After deleting html tags: #{string1}"
 	end
 end
 string1 = "RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag."
@@ -32,5 +32,5 @@ string2 = "RUBY does not require (or support) explicit type definition in variab
 str = String.new
 str.cut_string(string1)
 str.divide_and_reverse(string1)
-str.length(string1, string2)
+str.find_length(string1, string2)
 str.remove_html(string1)
