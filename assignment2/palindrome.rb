@@ -8,7 +8,6 @@ class Palindrome
 		else
 			print "String is not a palindrome\n"
 		end
-	end
 end
 
 print "Please enter the string you want to check for palindrome: "
