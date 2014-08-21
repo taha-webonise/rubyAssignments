@@ -7,16 +7,23 @@ require "csv"
 class Shopkeeper
   include Shop
   def add_product(product_name, price, stock_item=0, company_name="")
+<<<<<<< HEAD
   	self.
   	@product_name = product_name
   	@price = price
   	@stock_item = stock_item
   	@company_name = company_name
+=======
+>>>>>>> a39f33348788e3f36237fb17748930a96fcaa95d
   	CSV.read("shopInventory.csv","r").each_with_index do |val, index|
   	  @i = index
   	end
   	CSV.open("shopInventory.csv","a+") do |product|
+<<<<<<< HEAD
 	  product << [@i+1, @product_name, @price, @stock_item, @company_name]
+=======
+	  product << [@i+1, product_name, price, stock_item, company_name]
+>>>>>>> a39f33348788e3f36237fb17748930a96fcaa95d
   	end
   end
   
@@ -44,7 +51,13 @@ class Shopkeeper
       end
 	end
   end
+<<<<<<< HEAD
   
+=======
+  def list_product
+    Shop.list_product
+  end
+>>>>>>> a39f33348788e3f36237fb17748930a96fcaa95d
   def search_product(product_name)
     Shop.search_product(product_name)
   end
