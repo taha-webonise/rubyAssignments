@@ -1,0 +1,6 @@
+product_id,product_name,price,stock_item,company_name
+1,Route,2500,100,DLink
+2,Router,2000,99,DLink
+3,Router,2000,100,DLink
+5,Router,2000,100,DLink
+6,Camera,1500,54,canon
