@@ -9,11 +9,8 @@ class User
   def initialize(user_name)
     @user_name = user_name
   end
-<<<<<<< HEAD
-  def buy(product_id,credit_card,cvv)
-=======
+
   def buy(product_id, credit_card,cvv)
->>>>>>> a39f33348788e3f36237fb17748930a96fcaa95d
     arr = CSV.read("shopInventory.csv","r")
     CSV.open("shopInventory.csv","w") do |product|
       for entry in arr
@@ -27,9 +24,11 @@ class User
       product << [product_id, @user_name, credit_card, cvv]
     end
   end
+
   def list_product
     Shop.list_product
   end
+
   def search_product(product_name)
     Shop.search_product(product_name)
   end
